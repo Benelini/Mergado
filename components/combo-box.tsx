@@ -41,7 +41,11 @@ const currencies = [
   },
 ];
 
-export function Combobox() {
+type TComboBox = {
+  mainText: string;
+};
+
+export function Combobox({ mainText }: TComboBox) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -56,7 +60,7 @@ export function Combobox() {
         >
           {value
             ? currencies.find((currency) => currency.value === value)?.label
-            : "Select currency..."}
+            : mainText}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
