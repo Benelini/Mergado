@@ -10,7 +10,6 @@ export type TExchangeRates =  {
   date: string;
   success: boolean;
   value: number;
-
 }
 
 export type TFetchExchangeRatesArgs = {
