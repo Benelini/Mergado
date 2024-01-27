@@ -1,7 +1,7 @@
-import { TExchangeRates } from "@/app/utils/fetch-exchange-rates";
+import { TConversion } from "@/app/utils/fetch-conversion";
 
 interface CurrencyResultProps {
-  data: TExchangeRates;
+  data: TConversion;
 }
 
 export const CurrencyResult = ({ data }: CurrencyResultProps) => {

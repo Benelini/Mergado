@@ -2,7 +2,7 @@
 import { Combobox } from "./combo-box";
 import { Input } from "./ui/input";
 import ExchangeIcon from "./svgs/exchange-icon";
-import { fetchExchangeRates } from "@/app/utils/fetch-exchange-rates";
+import { fetchConversion } from "@/app/utils/fetch-conversion";
 import { useQuery } from "@tanstack/react-query";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Button } from "./ui/button";
@@ -15,7 +15,7 @@ export const ConvertCurrency = () => {
   const { data, isLoading, error, refetch } = useQuery({
     enabled: false,
     queryKey: ["exchangeRates", { from, to, amount }],
-    queryFn: () => fetchExchangeRates({ from, to, amount }),
+    queryFn: () => fetchConversion({ from, to, amount }),
   });
   const swapCurrencies = () => {
     setFrom(to);
