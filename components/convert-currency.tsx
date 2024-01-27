@@ -45,7 +45,7 @@ export const ConvertCurrency = () => {
       <Button
         className="bg-white text-black mt-5"
         onClick={() => {
-          refetch();
+          amount > 0 && refetch();
         }}
       >
         Convert
