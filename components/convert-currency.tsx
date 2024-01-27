@@ -25,11 +25,12 @@ export const ConvertCurrency = () => {
     return <div>Error: {error.message}</div>;
   }
   return (
-    <div className="flex flex-col justify-center items-end">
+    <div className="flex flex-col justify-center items-end max-md:items-center">
       {" "}
-      <div className="flex flex-row items-center justify-center gap-5">
-        <div className="flex flex-col justify-start items-start">
+      <div className="flex flex-row max-md:flex-col items-center justify-center gap-5">
+        <div className="flex flex-col justify-start items-start max-md:items-center max-md:justify-center">
           <Input
+            className="w-[200px]    "
             id="amount"
             placeholder="Enter currency amount"
             type="text"
@@ -50,7 +51,7 @@ export const ConvertCurrency = () => {
         Convert
       </Button>
       {data ? (
-        <div className="bg-white file:text-sm rounded-md py-2 mt-10 px-5 text-4xl ">
+        <div className="bg-white self-center max-md:text-lg file:text-sm rounded-md py-2 mt-10 px-5 text-4xl ">
           {data.amount} {""}
           {data.from} = {data.value.toPrecision(3)} {data.to}
         </div>
