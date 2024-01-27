@@ -17,6 +17,10 @@ export const ConvertCurrency = () => {
     queryKey: ["exchangeRates", { from, to, amount }],
     queryFn: () => fetchExchangeRates({ from, to, amount }),
   });
+  const swapCurrencies = () => {
+    setFrom(to);
+    setTo(from);
+  };
   return (
     <div className="flex flex-col justify-center items-end max-md:items-center">
       {" "}
@@ -33,6 +37,9 @@ export const ConvertCurrency = () => {
           />
         </div>
         <Combobox mainText="From..." value={from} setValue={setFrom} />
+        <button onClick={swapCurrencies}>
+          <ExchangeIcon className="size-10 fill-white" />
+        </button>
         <Combobox mainText="To..." value={to} setValue={setTo} />
       </div>
       <Button
