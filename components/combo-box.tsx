@@ -43,11 +43,12 @@ const currencies = [
 
 type TComboBox = {
   mainText: string;
+  value: string;
+  setValue: (value: string) => void;
 };
 
-export function Combobox({ mainText }: TComboBox) {
+export function Combobox({ mainText, value, setValue }: TComboBox) {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -73,7 +74,7 @@ export function Combobox({ mainText }: TComboBox) {
               <CommandItem
                 key={currency.value}
                 value={currency.value}
-                onSelect={(currentValue: string) => {
+                onSelect={(currentValue) => {
                   setValue(currentValue === value ? "" : currentValue);
                   setOpen(false);
                 }}
