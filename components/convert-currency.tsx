@@ -38,12 +38,12 @@ export const ConvertCurrency = () => {
         </div>
         <Combobox mainText="From..." value={from} setValue={setFrom} />
         <button onClick={swapCurrencies}>
-          <ExchangeIcon className="size-10 fill-white" />
+          <ExchangeIcon className="size-10 fill-white hover:fill-slate-300" />
         </button>
         <Combobox mainText="To..." value={to} setValue={setTo} />
       </div>
       <Button
-        className="bg-white text-black mt-5"
+        className="bg-white text-black mt-5 hover:bg-slate-300"
         onClick={() => {
           amount > 0 && refetch();
         }}
