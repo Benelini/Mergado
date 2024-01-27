@@ -6,6 +6,7 @@ import { fetchExchangeRates } from "@/app/utils/fetch-exchange-rates";
 import { useQuery } from "@tanstack/react-query";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import { CurrencyResult } from "./currency-result";
 
 export const ConvertCurrency = () => {
   const [amount, setAmount] = useState(0);
@@ -50,12 +51,7 @@ export const ConvertCurrency = () => {
       >
         Convert
       </Button>
-      {data ? (
-        <div className="bg-white self-center max-md:text-lg file:text-sm rounded-md py-2 mt-10 px-5 text-4xl ">
-          {data.amount} {""}
-          {data.from} = {data.value.toPrecision(3)} {data.to}
-        </div>
-      ) : null}
+      {data && <CurrencyResult data={data} />}
     </div>
   );
 };
