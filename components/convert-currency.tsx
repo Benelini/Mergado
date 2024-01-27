@@ -5,7 +5,6 @@ import ExchangeIcon from "./svgs/exchange-icon";
 import { fetchExchangeRates } from "@/app/utils/fetch-exchange-rates";
 import { useQuery } from "@tanstack/react-query";
 import { ChangeEvent, useEffect, useState } from "react";
-import useDebounce from "@/hooks/use-debounce";
 
 export const ConvertCurrency = () => {
   const [amount, setAmount] = useState(0);
