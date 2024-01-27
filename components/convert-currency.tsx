@@ -17,14 +17,6 @@ export const ConvertCurrency = () => {
     queryKey: ["exchangeRates", { from, to, amount }],
     queryFn: () => fetchExchangeRates({ from, to, amount }),
   });
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
   return (
     <div className="flex flex-col justify-center items-end max-md:items-center">
       {" "}
