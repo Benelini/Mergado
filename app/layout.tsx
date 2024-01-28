@@ -28,6 +28,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <header className="self-center text-center text-4xl bg-black text-white font-medium pt-10">
+          Currency Converter
+        </header>
         <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
