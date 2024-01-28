@@ -1,4 +1,4 @@
-import { TConversion } from "@/app/utils/fetch-conversion";
+import { TConversion } from "@/app/actions/fetch-conversion";
 
 interface CurrencyResultProps {
   data: TConversion;
