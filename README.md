@@ -3,3 +3,7 @@
 3. npm i
 4. npm run dev
 5. open localhost:3000 to see the app
+
+OR 
+
+visit: https://mergado.vercel.app/
