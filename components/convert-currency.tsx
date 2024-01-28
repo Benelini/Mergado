@@ -2,21 +2,22 @@
 import { Combobox } from "./combo-box";
 import { Input } from "./ui/input";
 import ExchangeIcon from "./svgs/exchange-icon";
-import { fetchConversion } from "@/actions/fetch-conversion";
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CurrencyResult } from "./currency-result";
+import { useCurrencyConversion } from "@/hooks/use-currency-conversion";
 
 export const ConvertCurrency = () => {
   const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("czk");
   const [to, setTo] = useState("usd");
-  const { data, isLoading, error, refetch } = useQuery({
-    enabled: false,
-    queryKey: ["exchangeRates", { from, to, amount }],
-    queryFn: () => fetchConversion({ from, to, amount }),
+
+  const { data, isLoading, error, refetch } = useCurrencyConversion({
+    from,
+    to,
+    amount,
   });
+
   const swapCurrencies = () => {
     setFrom(to);
     setTo(from);
@@ -27,7 +28,7 @@ export const ConvertCurrency = () => {
       <div className="flex flex-row max-md:flex-col items-center justify-center gap-5">
         <div className="flex flex-col justify-start items-start max-md:items-center max-md:justify-center">
           <Input
-            className="w-[200px]    "
+            className="w-[200px]"
             id="amount"
             placeholder="Enter currency amount"
             type="text"
