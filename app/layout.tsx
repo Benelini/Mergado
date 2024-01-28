@@ -4,12 +4,10 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import ReactQueryProvider from "@/providers/react-query-provider";
 
-export const fontSans = Inter({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Currency converter",
