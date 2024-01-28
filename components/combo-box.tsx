@@ -39,6 +39,18 @@ const currencies = [
     value: "pln",
     label: "Polish Zloty",
   },
+  {
+    value: "jpy",
+    label: "Japanese Yen",
+  },
+  {
+    value: "cad",
+    label: "Canadian Dollar",
+  },
+  {
+    value: "chf",
+    label: "Swiss Franc",
+  },
 ];
 
 type TComboBox = {
