@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import ExchangeIcon from "./svgs/exchange-icon";
 import { fetchConversion } from "@/actions/fetch-conversion";
 import { useQuery } from "@tanstack/react-query";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { CurrencyResult } from "./currency-result";
 
