@@ -1,4 +1,4 @@
-import { TConversion } from "@/app/actions/fetch-conversion";
+import { TConversion } from "@/actions/fetch-conversion";
 
 type TCurrencyResultProps = {
   data: TConversion | undefined;

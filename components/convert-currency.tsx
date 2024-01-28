@@ -2,7 +2,7 @@
 import { Combobox } from "./combo-box";
 import { Input } from "./ui/input";
 import ExchangeIcon from "./svgs/exchange-icon";
-import { fetchConversion } from "@/app/actions/fetch-conversion";
+import { fetchConversion } from "@/actions/fetch-conversion";
 import { useQuery } from "@tanstack/react-query";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Button } from "./ui/button";
