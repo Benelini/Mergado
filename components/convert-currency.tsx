@@ -50,7 +50,7 @@ export const ConvertCurrency = () => {
       >
         Convert
       </Button>
-      {data && <CurrencyResult data={data} />}
+      <CurrencyResult data={data} isLoading={isLoading} error={error} />
     </div>
   );
 };
